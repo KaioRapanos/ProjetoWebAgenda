@@ -15,8 +15,43 @@ h1 {
 	background-color: #66bbff;
 	padding: 5px 10px 5px 10px;
 	color: darkblue;
-	font-size: 1.2em;
-	font-weight: 700;
-	border-radius: 5px;
+	font-size: 1.1em;
+	font-weight: 600;
+	border: 0 ;
+ 	border-radius: 8px;
+	cursor: pointer;
 	
+}
+.caixa1{
+	width: 320px;
+	padding: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	border: 1px solid #66bbff;
+	border-radius: 8px;
+}
+
+.caixa2{
+	padding: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	border: 1px solid #66bbff;
+	border-radius: 8px;
+}
+
+#tabela{
+	margin-top: 30px;
+	border-collapse: collapse;
+	border-radius: 5px;
+}
+#tabela th{
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+	background-color: #66bbff;
+	color: #fff;
+}
+#tabela td{
+	border: 1px solid #ddd;
+	padding: 10px;
 }
