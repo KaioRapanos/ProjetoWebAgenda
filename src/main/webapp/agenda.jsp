@@ -3,6 +3,7 @@
 <%@ page import="agenda.model.JavaBeans"%>
 <%@ page import="java.util.ArrayList"%>
 <%
+	@ SuppressWarnings ("unchecked")
 	ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) 
 		request.getAttribute("contatos");
 %>
@@ -17,6 +18,7 @@
 <body>
 	<h1>Agenda de contatos</h1>
 	<a href="novo.html" class="bottom1">Novo contato</a>
+	<a href="report" class="bottom2">Relatório</a>
 	<table id="tabela">
 		<thead>
 			<tr>
@@ -24,6 +26,7 @@
 				<th>Nome</th>
 				<th>Fone</th>
 				<th>E-mail</th>
+				<th>Opções</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -33,9 +36,15 @@
 					<td><%=lista.get(i).getNome()%></td>
 					<td><%=lista.get(i).getFone()%></td>
 					<td><%=lista.get(i).getEmail()%></td>
+					<td><a href="select?idcon=<%=lista.get(i).getIdcon()%>
+							" class="bottom1">Editar</a>
+						<a href="javascript: confirmar(<%=lista.get(i).
+							getIdcon()%>)" class="bottom2">Excluir</a>							
+					</td>
 				</tr>
 			<%} %>
 		</tbody>
 	</table>
+	<script src="scripts/confirmador.js"></script>
 </body>
 </html>
